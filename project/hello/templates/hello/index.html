@@ -1,0 +1,21 @@
+{% load static %}
+
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Django Hello World</title>
+    <link rel="stylesheet" href="{% static 'hello/css/custom.css' %}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div class="content-wrapper">
+		<h1> Hello Django !!!  </h1>
+			
+	    	<h2> My hostname is : {{hostname}} </h2>
+			
+			<img src="{% static "hello/images/Django_Unchained_logo.JPG" %}" alt="My image">
+	</div>
+</body>
+</html>
+
