@@ -5,6 +5,7 @@ RUN apt-get update \
         postgresql-client \
     && rm -rf /var/lib/apt/lists/*
 
+USER 1001
 
 COPY requirements.txt ./
 RUN pip install -r requirements.txt
