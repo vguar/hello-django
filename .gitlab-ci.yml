@@ -1,0 +1,12 @@
+stages:
+  - build
+
+build-master:
+  stage: build
+  image: docker
+  services:
+    - docker:dind
+  script:
+    - docker login -u "$JFROG_USER" -p "$JFROG_PASSWORD" adeo-docker.jfrog.io
+    - docker build -t "adeo-docker.jfrog.io/manawa/hello-django:1.0" .
+    - docker push "adeo-docker.jfrog.io/manawa/hello-django:1.0"
